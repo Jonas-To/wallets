@@ -166,7 +166,7 @@ A -->|3.henter/validerer bevis|BW
 ```mermaid
 graph LR
     subgraph C [Konsument/Fagsystem]
-        FVL[Fagsystem Lommebok]
+        FVL[Fagsystem Leverandør Lommebok]
         F[Fagsystem]
     end
     subgraph TE [Tjenesteeier]
@@ -204,12 +204,12 @@ subgraph K [Kunde]
 end
 subgraph C [Konsument]
   F[Fagsystem]
-  BW[Virksomhetslommebok]
+  BW[Fagsystem Leverandør Lommebok]
 end
 VL -->|1. Kunde gir PoA| BW
-F -->|1.ber presentation link for nødvendige bevis| BW
-F -->|2. presentation link + data payload| A
-A -->|3.henter/validerer bevis|BW
+F -->|2.ber presentation link for nødvendige bevis| BW
+F -->|3. presentation link + data payload| A
+A -->|4.henter/validerer bevis|BW
 ```
 * Hvordan gjøre presentation link brukbar ? Handoff i OpenID4VCP prosessen?
 * Legge ved Bevis istedenfor direkte til APIet? 
